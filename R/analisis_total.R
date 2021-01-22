@@ -5,6 +5,7 @@
 #' @param variable variable para la que deseo realizar los cálculos
 #'
 #' @return un objeto, con el número de casos, suma, media, varianza, mínimo y máximo de la variable escogida
+#' @import dplyr
 #' @export
 #'
 #' @examples analisis_total(base = LifeCycleSavings, variable = pop15)
