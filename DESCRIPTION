@@ -1,0 +1,19 @@
+Package: insumoif
+Title: Obtención de insumo para determinar IF
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Catalina",
+           family = "Espinoza",
+           role = c("aut", "cre"),
+           email = "cespinozaquijada@gmail.com")
+Description: Calcula los insumos para  determinar empresas IF con información del marco o la muestra.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    dplyr,
+    rlang,
+    magrittr,
+    purrr
