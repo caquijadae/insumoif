@@ -9,7 +9,8 @@
 #' @export
 #'
 #' @examples analisis_total(base = LifeCycleSavings, variable = pop15)
-analisis_total <- function(base,variable) {
+analisis_total <- function(base,
+                           variable) {
   base %>% dplyr::summarise(n_filas=dplyr::n(),
                             sum=sum({{variable}}),
                             mean=mean({{variable}}),
