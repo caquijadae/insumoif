@@ -1,9 +1,9 @@
+# Análisis muestra
+
 df <- analisis_muestra(base1 = LifeCycleSavings,
                        id = sr,
                        var1 = pop15,
                        var2 = dpi)
-
-names(df)
 
 test_that("Primer eliminado", {
   expect_equal(df$sr_eliminado[2], 10.78)
