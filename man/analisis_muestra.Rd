@@ -16,7 +16,12 @@ analisis_muestra(base1, id, var1, var2)
 \item{var2}{variable a analizar, multiplicada por el factor de expansion}
 }
 \value{
-un data frame, con los descriptivos (n, suma, media, varianza, minimo, maximo, suma expandida, media expandida) de la variable a analizar, ademas del folio a eliminar y su respectivo valor de la variable analizada. Cada fila es un calculo distinto: el primero incluye todas las unidades, el segundo excluye la unidad con mayor valor, el tercero las dos unidades con mayor valor, asi sucesivamente hasta llegar a n=1
+un data frame, con los descriptivos (n, suma, media, varianza, minimo,
+maximo, suma expandida, media expandida) de la variable a analizar,
+ademas del folio a eliminar y su respectivo valor de la variable analizada.
+Cada fila es un calculo distinto: el primero incluye todas las unidades,
+el segundo excluye la unidad con mayor valor, el tercero las dos unidades
+con mayor valor, asi sucesivamente hasta llegar a n=1
 }
 \description{
 Title Obtiene los insumos para calcular las IF, cuando se trabaja con datos de la muestra
