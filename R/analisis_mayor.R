@@ -5,7 +5,10 @@
 #' @param folio identificador de cada unidad
 #' @param n es una constante, igual a 1 (no modificar)
 #'
-#' @return una lista, el primer elemento es la base de datos completa y los siguientes son los descriptivos de la variable (el primer cálculo elimina la venta más grande, el segundo elimina las dos más grandes, así sucesivamente)
+#' @return una lista, el primer elemento es la base de datos completa y los
+#'   siguientes son los descriptivos de la variable (el primer cálculo elimina
+#'   la venta más grande, el segundo elimina las dos más grandes, así sucesivamente)
+#' @importFrom rlang `:=`
 #' @export
 #'
 #' @examples analisis_mayor(df_in = LifeCycleSavings, variable = pop15, folio = sr)
@@ -39,13 +42,13 @@ analisis_mayor <- function(df_in,
   v_out <- df_out[[var_str]]
 
   list(df = df_out,
-       df_stats = dplyr::tibble(rut_eliminado = folio_diff,
-                         venta_eliminada = venta_diff,
-                         n_filas = n_filas,
-                         sum = sum(v_out),
-                         mean = mean(v_out),
-                         var = stats::var(v_out),
-                         min = min(v_out),
-                         max = max(v_out))
+       df_stats = dplyr::tibble(!!paste0(folio1, '_eliminado') := folio_diff,
+                                !!paste0(var_str, '_eliminado') := venta_diff,
+                                n_filas = n_filas,
+                                sum = sum(v_out),
+                                mean = mean(v_out),
+                                var = stats::var(v_out),
+                                min = min(v_out),
+                                max = max(v_out))
   )
 }

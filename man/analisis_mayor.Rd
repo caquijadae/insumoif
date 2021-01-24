@@ -16,7 +16,9 @@ analisis_mayor(df_in, variable, folio, n = 1)
 \item{n}{es una constante, igual a 1 (no modificar)}
 }
 \value{
-una lista, el primer elemento es la base de datos completa y los siguientes son los descriptivos de la variable (el primer cálculo elimina la venta más grande, el segundo elimina las dos más grandes, así sucesivamente)
+una lista, el primer elemento es la base de datos completa y los
+siguientes son los descriptivos de la variable (el primer cálculo elimina
+la venta más grande, el segundo elimina las dos más grandes, así sucesivamente)
 }
 \description{
 Calcula las estimaciones eliminando la venta mayor de forma iterativa.
