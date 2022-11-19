@@ -2,7 +2,7 @@
 % Please edit documentation in R/analisis_total.R
 \name{analisis_total}
 \alias{analisis_total}
-\title{Calcula las estimaciones con todos los casos.}
+\title{Title Calcula las estimaciones con todos los casos.}
 \usage{
 analisis_total(base, variable)
 }
@@ -15,7 +15,7 @@ analisis_total(base, variable)
 un objeto, con el número de casos, suma, media, varianza, mínimo y máximo de la variable escogida
 }
 \description{
-Calcula las estimaciones con todos los casos.
+Title Calcula las estimaciones con todos los casos.
 }
 \examples{
 analisis_total(base = LifeCycleSavings, variable = pop15)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/analisis_marco.R
 \name{analisis_marco}
 \alias{analisis_marco}
-\title{Obtiene los insumos para calcular las IF, cuando se trabaja con datos del marco}
+\title{Title Obtiene los insumos para calcular las IF, cuando se trabaja con datos del marco}
 \usage{
 analisis_marco(base1, id, var1)
 }
@@ -14,17 +14,10 @@ analisis_marco(base1, id, var1)
 \item{var1}{variable a analizar}
 }
 \value{
-Permite obtener un data frame, con los descriptivos 
-(n, suma, media, varianza, minimo, maximo) de la 
-variable a analizar, ademas del folio a eliminar 
-y su respectivo valor de la variable analizada. 
-Cada fila es un calculo distinto: el primero incluye todas 
-las unidades, el segundo excluye la unidad con mayor valor, 
-el tercero las dos unidades con mayor valor, 
-asi sucesivamente hasta llegar a n=1
+un data frame, con los descriptivos (n, suma, media, varianza, minimo, maximo) de la variable a analizar, ademas del folio a eliminar y su respectivo valor de la variable analizada. Cada fila es un calculo distinto: el primero incluye todas las unidades, el segundo excluye la unidad con mayor valor, el tercero las dos unidades con mayor valor, asi sucesivamente hasta llegar a n=1
 }
 \description{
-Obtiene los insumos para calcular las IF, cuando se trabaja con datos del marco
+Title Obtiene los insumos para calcular las IF, cuando se trabaja con datos del marco
 }
 \examples{
 analisis_marco(base1 = LifeCycleSavings, id = sr, var1 = pop15)
