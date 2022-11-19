@@ -35,20 +35,20 @@ analisis_muestra <- function(base1,
                               variable = !!var1_quo)
 
   df_acumulada_act <- purrr::map_dfr((purrr::accumulate(1:(nrow(base1)-1),
-                                                 analisis_mayor,
-                                                 variable = !!var1_quo,
-                                                 folio = !!id_quo,
-                                                 .init = base1)),
+                                                        analisis_mayor,
+                                                        variable = !!var1_quo,
+                                                        folio = !!id_quo,
+                                                        .init = base1)),
                                      'df_stats')
 
   total_act_e <- analisis_total(base = base1,
                                 variable = {{ var2 }})
 
   df_acumulada_act_e <- purrr::map_dfr((purrr::accumulate(1:(nrow(base1)-1),
-                                                   analisis_mayor,
-                                                   variable = {{var2}},
-                                                   folio = !!id_quo,
-                                                   .init = base1)),
+                                                          analisis_mayor,
+                                                          variable = {{ var2 }},
+                                                          folio = !!id_quo,
+                                                          .init = base1)),
                                        'df_stats')
 
   suppressMessages(
@@ -77,6 +77,6 @@ analisis_muestra <- function(base1,
   names(v_rename)[8] <- name_var1
 
   df_acumulada %>%
-    dplyr::select(1:8,10:11) %>%
+    dplyr::select(1:8, 10:11) %>%
     dplyr::rename(.env$v_rename)
 }

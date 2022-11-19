@@ -30,8 +30,8 @@ analisis_mayor <- function(df_in,
 
   df_out <- df_in %>%
     dplyr::slice_min(order_by = {{ variable }},
-              n = n_filas,
-              with_ties = FALSE)
+                     n = n_filas,
+                     with_ties = FALSE)
 
   folio_diff = setdiff(df_in[[folio1]],
                        df_out[[folio1]])
