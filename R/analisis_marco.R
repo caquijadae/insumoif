@@ -12,14 +12,15 @@ analisis_marco <- function(base1,
                            id,
                            var1) {
 
-  total_act <- analisis_total(base=base1,variable={{var1}})
+  total_act <- analisis_total(base = base1,
+                              variable = {{ var1 }})
 
-  df_acumulada_act <-purrr:: map_dfr((purrr::accumulate(1:(nrow(base1)-1),
-                                                        analisis_mayor,
-                                                        variable = {{var1}},
-                                                        folio = {{id}},
-                                                        .init = base1)),
-                                     'df_stats')
+  df_acumulada_act <-purrr::map_dfr((purrr::accumulate(1:(nrow(base1)-1),
+                                                       analisis_mayor,
+                                                       variable = {{ var1 }},
+                                                       folio = {{ id }},
+                                                       .init = base1)),
+                                    'df_stats')
 
   dplyr::bind_rows(total_act,
                    df_acumulada_act)
